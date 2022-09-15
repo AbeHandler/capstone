@@ -2,7 +2,7 @@
 id: ak3n862qa5sc3rrpew4vdnt
 title: Deadlines
 desc: ''
-updated: 1663270354530
+updated: 1663273527647
 created: 1663270238854
 ---
 
@@ -14,3 +14,7 @@ created: 1663270238854
     - What do you actually want to get out of this?
     - How can I help you get there?
 - Learn how to submit a pull request adding your folder and `goals.md` file to the repo
+
+- Abe: email taguette dev
+
+- Find an fix a bug in Taguette
