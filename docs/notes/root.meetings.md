@@ -6,6 +6,12 @@ updated: 1663270448040
 created: 1663270145395
 ---
 
+### September 22, 2022
+
+- Take DJ's code put into Docker 
+- Scrape linked in
+- Get it to build
+- Fix bugs
 
 ### September 15, 2022
 
