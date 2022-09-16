@@ -15,7 +15,8 @@ created: 1663270238854
     - How can I help you get there?
 - Learn how to submit a pull request adding your folder and `goals.md` file to the repo
 
-- Abe: email taguette dev
+##### Abe: 
+- [x] email taguette dev
 
 ### Friday September 29, 2022
 
