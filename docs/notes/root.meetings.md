@@ -6,6 +6,21 @@ updated: 1663270448040
 created: 1663270145395
 ---
 
+### September 29, 2022
+
+Finding real qualitative researchers to get feedback will take time. I suggest bootstrapping or prototyping our software and workflow with CU Boulder students. We can conduct interviews try to analyze them with our software, then pair it with `r/CUBoulder`.
+
+Interview questions on two topics which I think are on `r/CUBoulder`
+
+###### Stress
+- What are major causes of stress in your life?
+- How do you manage stress?
+- Have you ever sought out help for stress? And if so what did you do?
+
+###### What people like/dislike about CU
+- What do you like about CU Boulder?
+- What do you dislike about it?
+- If you had to go to college all over again, would you have chosen CU Boulder?
 
 
 ### September 22, 2022
