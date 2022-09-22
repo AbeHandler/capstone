@@ -8,10 +8,17 @@ created: 1663270145395
 
 ### September 22, 2022
 
-- Take DJ's code put into Docker 
-- Scrape linked in
-- Get it to build
-- Fix bugs
+- Abe reviewed the groups goals. 
+    - Did someone merge the PR? Seemed to work OK w/ a pull of main :)
+    - If you had trouble, please ask a peer for help! This is a class!
+
+Next steps:
+- Take DJ's NLP code put it into Docker 
+    - Abe can point you to code
+- Everyone can get software to build locally
+- Port GitLab repo to GitHub
+- Fix bugs?
+- Learn how to scrape LinkedIn
 
 ### September 15, 2022
 
