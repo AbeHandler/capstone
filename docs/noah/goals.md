@@ -1,0 +1,7 @@
+# Capstone Goals - Noah Nguyen
+## What do you actually want to get out of this?
+- I would like to work with the team to contribute to a project that people are able to and actually want to use.  My group experience at CU has largely in a classroom setting with a small group on a premade project.  In line with this idea of working on something that people actually want to use, I would like to possibly get more experience in user design/testing.  I have had previous experience designing systems for users - both at CU and in internships - but have had less time to be able to peroperly go through user testing and iteratiion.  More often I've either already had a design to work with or not had time to properly dedicate to learning about the actual human interaction. 
+
+## How can I help you get there?
+- I believe that a large part of this project is going to be setting clear goals and milestones, such as a project charter.  (We discussed in lecture that a first milestone might be the project charter we have to do for class, outlining things such as mission, problem statement, scope, and benefits.)  
+- Additionally, any opportunites to contribute to the design or testing of the project components users will be directly interacting with would be appreciated.  
