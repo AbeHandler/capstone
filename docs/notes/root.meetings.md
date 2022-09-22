@@ -20,6 +20,17 @@ Next steps:
 - Fix bugs?
 - Learn how to scrape LinkedIn
 
+
+Meeting Questions (from Jaryd):
+
+- I understand the general concept is to connect a piece of software for annotating text to be able to search social media posts, but I have some clarifying questions:
+    - What kind of service are we creating? Something that runs locally? Something that runs in the cloud and is just a web service people access? You mentioned docker, but I'm confused on the overall plan, I apologize if I missed that somewhere.
+    - What's the overall point of linking text from annotated to social media posts? Some examples could be very helpful in understanding the project.
+    - Where is the NLP code vs what we want to create.
+    - Taguette will not run on Ventura without "hacks".
+    - Ability to go above and beyond.
+
+
 ### September 15, 2022
 
 - Introductions
