@@ -6,14 +6,40 @@ updated: 1663270448040
 created: 1663270145395
 ---
 
+
+
 ### September 22, 2022
 
-- Abe reviewed the groups goals. 
+#### Notes from meeting
+We discussed just rebuilding the project instead of using Taguette. The stuff we get from Taguette is: code to ingest documents, upload documents, tag spans from documents with tags, organize and analze tags, export the tagged text
+
+###### Links
+- [Nvivo](https://www.qsrinternational.com/nvivo-qualitative-data-analysis-software/home) qualitative data analysis software
+- [Dissertation](https://www.abehandler.com/assets/pdf/dissertation.pdf) See page 198 for relevant discussion
+
+###### Abe
+- List requirements for software, and make some mockups
+- Pen and paper prototype to start
+
+
+###### Jaryd and Bell:
+-  Try to build a simple front end for tagging documents
+
+###### Emily + Noah:
+- Investigate scraping LinkedIn
+
+###### Dane + Isabelle:
+- Containerizing DJ’s code
+- Abe will connect them with DJ
+
+
+###### Notes leading up to meeting
+- Abe reviewed the groups goals.
     - Did someone merge the PR? Seemed to work OK w/ a pull of main :)
     - If you had trouble, please ask a peer for help! This is a class!
 
 Next steps:
-- Take DJ's NLP code put it into Docker 
+- Take DJ's NLP code put it into Docker
     - Abe can point you to code
 - Everyone can get software to build locally
 - Port GitLab repo to GitHub

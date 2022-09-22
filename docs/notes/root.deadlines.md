@@ -6,6 +6,9 @@ updated: 1663273681109
 created: 1663270238854
 ---
 
+
+I don't think we are using this document anymore. -Abe 
+
 ### Friday September 23, 2022
 
 ##### Whole group:
