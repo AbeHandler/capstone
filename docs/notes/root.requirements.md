@@ -6,36 +6,36 @@ updated: 1663900469864
 created: 1663899714444
 ---
 
-## Document actions (Taguette supports)
+# Features
+
+## Document actions
 - Upload document
 - View document
+- View tags in document
 
-## Tag actions (Taguette supports)
+## Tag actions
 - Create tag
 - Split tag
     - What happens to documents with that tag? This one seems a little tricky.
-- Merge tag
+- Merge tags, i.e. merge tags A and B
 - Review tag
-    - See documents with the tag
+    - i.e., see documents with the tag
 
-## Deployment (Taguette supports)
-- Should run locally and on the web
-- If runs locally, it can just use a local webserver and be a local web application
 
 ## Social media actions
 - View social media posts for tag
-    - Input is one or more tagged posts
+    - Input is one or more tagged quotes
+    - View displays related social media posts
 - Add social media post to tag
     - You can input text from a post as a document and add a tag
 
 ## Social media imports
 - Bulk import social media corpus
 - Import single social media post
-    - Tag social media post
+- Tag social media post
 - Import from screenshot (OCR)
-    - Upload screenshot from social media
-- Import from URL
-- Import from:
+- Upload screenshot from social media
+- Import from comment URL (general interface). Ideally we could support:
     - Reddit
     - LinkedIn
     - Twitter
@@ -52,6 +52,12 @@ created: 1663899714444
     - Expected proportion
     - How many are like this or different?
 
+# Properties
+
+## Deployment
+- Should run locally and on the web
+- If runs locally, it can just use a local webserver and be a local web application
+
 ## Team
 - You do want the ability to work with multiple annotators
 - Share posts and tags with teammates
@@ -67,3 +73,7 @@ created: 1663899714444
 - Keep views simple so they can be easily changed
 - Ideally write back end in Python
 - If we don't modify Taguette we can borrow code from Taguette
+
+# Wireframes
+
+- For many of the document and tag actions, we can mimic the interactions from Taguette. Taguette is copying interactions from Nvivo. So there are standard ways of doing things for now.

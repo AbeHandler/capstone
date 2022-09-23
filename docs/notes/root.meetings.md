@@ -10,7 +10,7 @@ created: 1663270145395
 
 Finding real qualitative researchers to get feedback will take time. I suggest bootstrapping or prototyping our software and workflow with CU Boulder students. We can conduct interviews try to analyze them with our software, then pair it with `r/CUBoulder`.
 
-Interview questions on two topics which I think are on `r/CUBoulder`
+Interview questions on two topics which I think are on `r/CUBoulder`. We will need to all stick to the same rough script, but ask open-ended followups. This is called a `semi-structured` interview because you start with a script and allowed to deviate. I think we should try two topics.
 
 ###### Stress
 - What are major causes of stress in your life?
@@ -23,6 +23,8 @@ Interview questions on two topics which I think are on `r/CUBoulder`
 - If you had to go to college all over again, would you have chosen CU Boulder?
 
 - `requirements.md`
+
+- I use Dendron for docs btw and am a fan of the tool.
 
 ### September 22, 2022
 
