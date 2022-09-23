@@ -22,6 +22,7 @@ Interview questions on two topics which I think are on `r/CUBoulder`
 - What do you dislike about it?
 - If you had to go to college all over again, would you have chosen CU Boulder?
 
+- `requirements.md`
 
 ### September 22, 2022
 
