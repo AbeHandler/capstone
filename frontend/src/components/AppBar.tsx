@@ -6,6 +6,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 import './AppBar.css';
 
@@ -41,6 +42,8 @@ function responsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
+                component={Link}
+                to={`/${page}`}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
