@@ -20,6 +20,7 @@ created: 1663899714444
 - Merge tags, i.e. merge tags A and B
 - Review tag
     - i.e., see documents with the tag
+Note: tags must be hierarchical 
 
 
 ## Social media actions
