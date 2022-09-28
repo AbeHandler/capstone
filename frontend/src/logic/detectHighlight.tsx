@@ -11,7 +11,10 @@ function generateGetBoundingClientRect(x = 0, y = 0) {
   });
 }
 
-export default function detectHighlight(event:any, window:Window): VirtualElement | undefined {
+export default function detectHighlight(
+  event:any,
+  window:Window,
+): [ VirtualElement, Range] | undefined {
   const selection = window.getSelection();
   const selectedText = selection?.toString();
   const virtualElement = {
@@ -25,7 +28,7 @@ export default function detectHighlight(event:any, window:Window): VirtualElemen
         selectionRect.x + selectionRect.width / 2,
         selectionRect.y - 10,
       );
-      return virtualElement as VirtualElement;
+      return [virtualElement as VirtualElement, selection!.getRangeAt(0)];
     }
   }
   return undefined;

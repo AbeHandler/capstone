@@ -1,10 +1,12 @@
 import {
-  Paper, Popper, Button, Typography, Grow,
+  Paper, Popper, Button, Typography, Grow, TextField, IconButton,
 } from '@mui/material';
 import { Box } from '@mui/system';
+import CloseIcon from '@mui/icons-material/Close';
 import React, { useEffect, useState } from 'react';
 import { VirtualElement } from '../types/types';
 import detectHighlight from '../logic/detectHighlight';
+import '../styling/main.css';
 
 function documentPage() {
   // -----
@@ -14,6 +16,14 @@ function documentPage() {
     selectionVirtualElement,
     setSelectionVirtualElement,
   ] = useState<VirtualElement | undefined>();
+  const [
+    savedSelectionLocation,
+    setSavedSelectionLocation,
+  ] = useState<VirtualElement | undefined>();
+  const [selectionRange, setSelectionRange] = useState<Range | undefined>();
+  const [showTagOptions, setShowTagOptions] = useState(false);
+  const [tagName, setTagName] = useState('');
+  const [tagDescription, setTagDescription] = useState('');
 
   // -----
   // USE EFFECT
@@ -21,9 +31,108 @@ function documentPage() {
   // Add the event listener for highlighted text to the window on load
   useEffect(() => {
     window.addEventListener('mouseup', (event) => {
-      setSelectionVirtualElement(detectHighlight(event, window));
+      const detectHighightReturn = detectHighlight(event, window);
+      if (detectHighightReturn) {
+        setSelectionVirtualElement(detectHighightReturn[0]);
+        setSelectionRange(detectHighightReturn[1]);
+      }
     });
   }, []);
+
+  useEffect(() => {
+    if (!showTagOptions) {
+      setSavedSelectionLocation(selectionVirtualElement);
+    }
+  }, [showTagOptions, selectionVirtualElement]);
+
+  let tagOptions;
+
+  if (showTagOptions) {
+    tagOptions = (
+        <Box
+        sx={{
+          margin: 'auto',
+          textAlign: 'center',
+        }}
+        >
+
+            <div style={{ position: 'absolute', right: '0', top: '0' }}>
+                <IconButton
+                    color="primary"
+                    aria-label="Close add tag menu"
+                    onClick={() => {
+                      setShowTagOptions(false);
+                      setTagName('');
+                      setTagDescription('');
+                      setSelectionVirtualElement(undefined);
+                    }}
+                >
+                    <CloseIcon />
+                </IconButton>
+            </div>
+            <Typography variant='h4' align='center' sx={{ color: 'text.secondary' }} >
+                Add Tag
+            </Typography>
+
+            <TextField
+                label="Tag Name"
+                variant="outlined"
+                sx={{
+                  minWidth: '25vw',
+                }}
+                onChange={(event) => {
+                  setTagName(event.target.value);
+                }}
+                value={tagName}
+            />
+            <br/><br/>
+            <TextField
+                label="Description"
+                variant="outlined"
+                multiline
+                minRows={3}
+                sx={{
+                  minWidth: '25vw',
+                }}
+                onChange={(event) => {
+                  setTagDescription(event.target.value);
+                }}
+                value={tagDescription}
+            />
+            <br/><br/>
+            <Button
+                variant="contained"
+                onClick={() => {
+                  console.log('Name: ', tagName, 'Description: ', tagDescription);
+                  setShowTagOptions(false);
+                  setTagName('');
+                  setTagDescription('');
+                  setSelectionVirtualElement(undefined);
+                }}
+            >
+                Add Tag
+            </Button>
+        </Box>
+    );
+  } else {
+    tagOptions = (
+        <Button
+            onClick={() => {
+              setShowTagOptions(true);
+              if (selectionRange) {
+                const node = document.createElement('span');
+                const range = selectionRange;
+                node.appendChild(range.extractContents());
+                range.insertNode(node);
+                window.getSelection()?.removeAllRanges();
+              }
+            }}
+            variant="text"
+        >
+            Tag
+        </Button>
+    );
+  }
 
   // -----
   // COMPONENT
@@ -39,9 +148,12 @@ function documentPage() {
         {/* Handles Pop-up 'Tag' Menu */}
         <Popper
             className='popper-root'
-            open={selectionVirtualElement !== undefined}
+            open={
+                savedSelectionLocation !== undefined
+                && (selectionVirtualElement !== undefined || showTagOptions)
+            }
             placement='top'
-            anchorEl={selectionVirtualElement}
+            anchorEl={savedSelectionLocation}
             >
                 {/* Transition the Tag Menu in */}
                 <Grow in={true}>
@@ -51,12 +163,8 @@ function documentPage() {
                           padding: 1,
                         }}
                     >
-                        {/* Main 'Tag' Button */}
-                        <Button
-                            variant="text"
-                        >
-                            Tag
-                        </Button>
+                        {/* Tag Options */}
+                        {tagOptions}
                     </Paper>
                 </Grow>
             </Popper>
@@ -78,7 +186,7 @@ function documentPage() {
                 }}
             >
                 {/* Main Content */}
-                <Typography>
+                <div id='main-document-text'>
                     {/* eslint-disable-next-line max-len */}
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum id justo at auctor. Suspendisse at dui risus. Cras condimentum neque a nisi maximus aliquam. Cras non feugiat nunc. Sed non libero gravida, consectetur metus id, iaculis quam. Donec eget nibh ac risus ornare sagittis quis a quam. Curabitur elementum laoreet elit, nec dapibus velit dapibus vitae. Phasellus pellentesque, risus at sollicitudin convallis, urna urna rutrum ligula, sit amet elementum urna mi in arcu. Nulla hendrerit iaculis augue, molestie tristique odio molestie a. Pellentesque pellentesque ut mauris in eleifend. Sed eget convallis diam. Donec id porttitor ipsum. Aliquam sed dapibus ante, lobortis consectetur nunc. Quisque dictum enim sit amet enim fringilla consequat. Nam aliquet, est id congue rutrum, ex arcu dignissim risus, id volutpat tortor orci sit amet massa. Nam eu enim feugiat, accumsan magna in, consectetur ligula.
                     <br /><br />
@@ -90,7 +198,7 @@ function documentPage() {
                     <br /><br />
                     {/* eslint-disable-next-line max-len */}
                     Sed ut suscipit orci. Aliquam lorem nisl, sagittis a rutrum at, vestibulum nec orci. Mauris tristique porttitor risus, non tristique nisl bibendum eget. In congue tristique sapien et egestas. Nam vehicula mi vitae commodo elementum. Maecenas eu nibh vel dolor gravida molestie. Integer non cursus dolor. Maecenas sagittis dui sit amet nunc egestas maximus a eu est.
-                </Typography>
+                </div>
             </Paper>
         </Box>
     </Box>
