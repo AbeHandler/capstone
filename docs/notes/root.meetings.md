@@ -24,7 +24,7 @@ Interview questions on two topics which I think are on `r/CUBoulder`. We will ne
 - If you had to go to college all over again, would you have chosen CU Boulder?
 
 ### Requirements
-- `[requirements.md](https://github.com/AbeHandler/capstone/blob/main/docs/notes/root.requirements.md)`
+- [requirements.md](https://github.com/AbeHandler/capstone/blob/main/docs/notes/root.requirements.md)
 
 ### Misc
 
