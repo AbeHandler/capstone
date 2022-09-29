@@ -8,6 +8,7 @@ created: 1663270145395
 
 ### September 29, 2022
 
+### Example project
 Finding real qualitative researchers to get feedback will take time. I suggest bootstrapping or prototyping our software and workflow with CU Boulder students. We can conduct interviews try to analyze them with our software, then pair it with `r/CUBoulder`.
 
 Interview questions on two topics which I think are on `r/CUBoulder`. We will need to all stick to the same rough script, but ask open-ended followups. This is called a `semi-structured` interview because you start with a script and allowed to deviate. I think we should try two topics.
@@ -22,7 +23,10 @@ Interview questions on two topics which I think are on `r/CUBoulder`. We will ne
 - What do you dislike about it?
 - If you had to go to college all over again, would you have chosen CU Boulder?
 
-- `requirements.md`
+### Requirements
+- `[requirements.md](https://github.com/AbeHandler/capstone/blob/main/docs/notes/root.requirements.md)`
+
+### Misc
 
 - I use Dendron for docs btw and am a fan of the tool.
 
